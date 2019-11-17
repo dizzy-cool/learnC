@@ -5,7 +5,7 @@
 
 int prime(int num);
 
-int main(void){
+int d5p3(void){
 	int a = 0;
 
 	scanf("%d", &a);
