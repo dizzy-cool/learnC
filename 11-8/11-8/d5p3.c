@@ -1,29 +1,36 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 
 int d5p3(void){
 	
-	int key = 123;
-	int i = 1;
-	int a = 0;
-	printf("请输入3位密码:");
-	scanf("%d", &a);
-	if (a == key) {
-		printf("登陆成功!\n");
-	}
-	else while(a != key){
-		printf("您的输错%d次!请重新输入3位密码:\n" , i);
-		scanf("%d", &a);
-		if (a == key) {
-			printf("登陆成功!\n");
+	char key[10] = {0};
+	int i = 0;
+	char* p = "asdfgh";
+	
+
+	for (i = 0; i < 3; i++) {
+		printf("请输入密码:\n");
+		scanf("%s", key);
+
+		if (strcmp(key, p) == 0) {
+
+			printf("登陆成功\n");
 			break;
 		}
-		i++;
-		if (i > 2)
-			break;
+		else {
+			printf("密码错误\n");
+		}
+		if (i == 3) {
+			printf("您已输错3次,退出程序!\n");
+
+		}
+
 	}
+	
+
 	
 
 	system("pause");
