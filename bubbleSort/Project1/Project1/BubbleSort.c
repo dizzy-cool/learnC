@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int BubbleSort(int arr[10], int size) {
+int BubbleSort(int arr[], int size) {
 	//bound表示的是边界坐标
 	//[ 0 ,bound )表示已经排序的区间
 	//( bound , size-1]表示未排序区间
@@ -26,10 +26,10 @@ void PrintArr(int arr[], int size) {
 }
 
 int main(void){
-	int arr[] = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+	int arr[] = { 9, 5, 2, 7, 3, 6, 10, 8 };
 	int size = sizeof(arr) / sizeof(arr[0]);
-	BubbleSort(arr , 10);
-	PrintArr(arr , 10);
+	BubbleSort(arr , size);
+	PrintArr(arr , size);
 
 	system("pause");
 	return 0;
