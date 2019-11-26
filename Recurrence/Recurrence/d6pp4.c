@@ -1,23 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-void reverse_string(char* string) {
+void reverseStringFake(char* string) {
 	string++;
 	if (*string != '\0') {
 		
-		reverse_string(string);
+		reverseStringFake(string);
 	}
 	string--;
 	printf("%c", *string);
+}
 
+void reverseString(char* str) {
+	int i = strlen(str) - 1;
+	char temp = '0';
+	temp = *str;
+	*str = *(str + i);
+	*(str + i) = '\0';
 
+	reverseString(str+1);
+	*(str + i) = temp;
 }
 
 
 
-int d6pp4(void){
-	char* string = "abcdefjh";
-	reverse_string(string);
+int main(void){
+	char* string = "abcd";
+	reverseString(string);
 	printf("\n");
 	for (; *string != '\0'; string++) {
 		printf("%c", *string);
