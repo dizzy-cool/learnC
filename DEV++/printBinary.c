@@ -5,6 +5,7 @@
 **函 数 名: void printBinary(int val2) 
 **功    能: 打印二进制数 
 **说    明: 无 
+**参	数:	val2 是int型数 
 ******************************************/
 void printBinary(int val2){
 	int k = 0;
@@ -26,7 +27,7 @@ void printBinary(int val2){
 }
 
 int main(){
-	printBinary(-1);
+	printBinary(-11);
 	system("pause");
 	return 0; 
 }
