@@ -40,7 +40,7 @@ void trianglePascal(void) {
 }
 
 
-int main(void){
+int d10p3(void){
 	
 	trianglePascal();
 	system("pause");
