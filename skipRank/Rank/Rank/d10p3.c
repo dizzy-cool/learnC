@@ -24,9 +24,25 @@ void triangle(void) {
 	}
 }
 
+void trianglePascal(void) {
+	int pascalTriangle[MAX_COL] = { 1 };
+	printf("%d\n", pascalTriangle[0]);
+
+	for (int row = 1; row < MAX_ROW; row++) {
+		for (int col = row ; col >= 1; col--) {
+			pascalTriangle[col] = pascalTriangle[col - 1] + pascalTriangle[col];
+		}
+		for (int i = 0; i <= row; i++) {
+			printf("%d ", pascalTriangle[i]);
+		}
+		printf("\n");
+	}
+}
+
+
 int main(void){
 	
-	triangle();
+	trianglePascal();
 	system("pause");
 	return 0;
 }
