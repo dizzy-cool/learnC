@@ -38,7 +38,7 @@ void skipRank(void) {
 	}
 }
 
-int isFDifferent(int a, int b, int c, int d, int e) {
+char isFDifferent(int a, int b, int c, int d, int e) {
 	char temp = 0;
 	temp |= 1 << (a - 1);
 	temp |= 1 << (b - 1);
@@ -65,7 +65,7 @@ void skipWaterRank(void) {
 									if ((d == 3 && c != 5) || (d != 3 && c == 5)) {
 										if ((a == 1 && e != 4) || (a != 1 && e == 4)) {
 											//筛选唯一符合的顺序,使用操作符解决
-											if (isFDifferent(a, b, c, d, e) == 31) {
+											if (isFDifferent(a, b, c, d, e) == 0x1f) {
 												printf("名次排名如下: a = %d ,b = %d ,c = %d ,d = %d , e = %d\n", a, b, c, d, e);
 											}
 										}
