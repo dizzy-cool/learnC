@@ -37,9 +37,9 @@ void reverse(char* src) {
 	reverseWord(src, src + i);
 }
 
-int d1206P7(void){
+int main(void){
 	char src[] = "student a am i";
-	//scanf("%[^\n]", src);
+	scanf("%[^\n]", src);
 	reverse(src);
 	
 	printf("%s", src);

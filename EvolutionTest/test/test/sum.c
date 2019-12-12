@@ -12,7 +12,7 @@ int sumFuct(int n) {
 	return sum;
 }
 
-int main(void) {
+int sum(void) {
 
 	printf("%d\n", sumFuct(2));
 
