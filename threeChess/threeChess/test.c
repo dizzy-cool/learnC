@@ -4,8 +4,10 @@
 #include <time.h>
 #include <string.h>
 
+
 #define MAX_ROW 3
 #define MAX_COL 3
+
 
 int menu() {
 	printf("============================\n");
